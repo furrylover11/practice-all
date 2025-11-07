@@ -1,0 +1,161 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "");
+	cout << "Переводчик" << endl;
+	cout << "[1] - русские слова" << endl;
+	cout << "[2] - английские слова" << endl;
+	cout << "[3] -выйти" << endl;
+	int num, choice;
+	cout << "выбери число" << endl;
+	cin >> num;
+	switch (num) {
+	case 1:
+		cout << "Список русских слов:" << endl;
+		cout << "[1] - дом" << endl;
+		cout << "[2] - дорога" << endl;
+		cout << "[3] - звезда" << endl;
+		cout << "[4] - солнце" << endl;
+		cout << "[5] - огонь" << endl;
+		cout << "[6] - вода" << endl;
+		cout << "[7] - имя" << endl;
+		cout << "[8] - зеленый" << endl;
+		cout << "[9] - ручка" << endl;
+		cout << "[10] - тетрадь" << endl;
+		cout << "[11] - компьютер" << endl;
+		cout << "[12] - стул" << endl;
+		cout << "[13] - боль" << endl;
+		cout << "[14] - врач" << endl;
+		cout << "[15] - неделя" << endl;
+		cout << "выбери номер слова" << endl;
+		cin >> choice;
+		switch (choice) {
+		case 1:
+			cout << "перевод: дом - house";
+			break;
+		case 2:
+			cout << "перевод: дорога - road";
+			break;
+		case 3:
+			cout << "перевод: звезда - star";
+			break;
+		case 4:
+			cout << "перевод: солнце - sun";
+			break;
+		case 5:
+			cout << "перевод: огонь - fire";
+			break;
+		case 6:
+			cout << "перевод: вода - water";
+			break;
+		case 7:
+			cout << "перевод: имя - name";
+			break;
+		case 8:
+			cout << "перевод: зеленый - green";
+		case 9:
+			cout << "перевод: ручка - pen";
+			break;
+		case 10:
+			cout << "перевод: тетрадь - notebook";
+			break;
+		case 11:
+			cout << "перевод: компьютер - computer";
+			break;
+		case 12:
+			cout << "перевод: стул - chair";
+			break;
+		case 13:
+			cout << "перевод: боль - pain";
+			break;
+		case 14:
+			cout << "перевод: врач - doctor";
+			break;
+		case 15:
+			cout << "перевод: неделя - week";
+			break;
+		default:
+			cout << "такой цифры нет в списке";
+			break;
+		}
+		break;
+	case 2:
+		cout << "Список английских слов" << endl;
+		cout << "[1] - house" << endl;
+		cout << "[2] - road" << endl;
+		cout << "[3] - star" << endl;
+		cout << "[4] - sun" << endl;
+		cout << "[5] - fire" << endl;
+		cout << "[6] - water" << endl;
+		cout << "[7] - name" << endl;
+		cout << "[8] - green" << endl;
+		cout << "[9] - pen" << endl;
+		cout << "[10] - notebook" << endl;
+		cout << "[11] - computer" << endl;
+		cout << "[12] - chair" << endl;
+		cout << "[13] - pain" << endl;
+		cout << "[14] - doctor" << endl;
+		cout << "[15] - week" << endl;
+		cout << "выбери слово" << endl;
+		cin >> choice;
+		switch (choice) {
+		case 1:
+			cout << "перевод: house - дом";
+			break;
+		case 2:
+			cout << "перевод: road - дорога";
+			break;
+		case 3:
+			cout << "перевод: star - звезда";
+			break;
+		case 4:
+			cout << "перевод: sun - солнце";
+			break;
+		case 5:
+			cout << "перевод: fire - огонь";
+			break;
+		case 6:
+			cout << "перевод: water - вода";
+			break;
+		case 7:
+			cout << "перевод: name - имя";
+			break;
+		case 8:
+			cout << "перевод: green - зеленый";
+			break;
+		case 9:
+			cout << "перевод: pen - ручка";
+			break;
+		case 10:
+			cout << "перевод: notebook - тетрадь";
+			break;
+		case 11:
+			cout << "перевод: computer - компьютер";
+			break;
+		case 12:
+			cout << "перевод: chair - стул";
+			break;
+		case 13:
+			cout << "перевод: pain - боль";
+			break;
+		case 14:
+			cout << "перевод: doctor  - доктор";
+			break;
+		case 15:
+			cout << "перевод: week - неделя";
+			break;
+		default:
+			cout << "такой цифры нет в списке";
+			break;
+		}
+		break;
+	case 3:
+		cout << "вы вышли из переводчика";
+		break;
+	default:
+		cout << "вы выбрали не существующий пункт." << endl;
+		break;
+	}
+	return 0;
+}
