@@ -3,24 +3,27 @@ using namespace std;
 int main() {
 	setlocale(0, "");
 	int num;
-	int count = 0;
-	while (count == 0) {
-		cout << "введи число от 1 до 15: " << endl;
-		cin >> num;
-		if (num == 0) {
-			cout << "вы вышли из программы" << endl;
-			return 0;
-		}
-		else if (num <1 or num > 15) {
-			cout << "ошибка, число должно быть от 1 до 15" << endl;
-			return 0;
-		}
-		else;{
-			while (count <= num) {
-				cout << "цикл сработал. круг: " << count << endl;
-				count++;
-			}
-		}
+	int a = 1;
+	while (true) {
+		cout << " " << endl;
+				cout << "[0] - выход из программы" << endl;
+				cout << "введи число от 1 до 15: " << endl;
+				cin >> num;
+				if (num == 0) {
+					cout << "вы вышли из программы" << endl;
+					return 0;
+				}
+				else if (num < 1 or num > 15) {
+					cout << "ошибка, число должно быть от 1 до 15" << endl;
+					return 0;
+				}
+				else; {
+					int count = 1;
+					while (count <= num) {
+						cout << "цикл сработал. круг: " << count << endl;
+						count++;
+					}
+				}
 	}
-		return 0;
+return 0;
 }
