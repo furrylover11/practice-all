@@ -1,0 +1,59 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+int main() {
+	setlocale(0, "");
+	srand(time(NULL));
+
+	int choice, num1;
+	int wins = 0;
+	int lives = 5;
+
+	cout << "меню" << endl;
+	cout << "[1] - начать игру" << endl;
+	cout << "[2] - выйти" << endl;
+	cout << "выбери: ";
+	cin >> choice;
+
+	if (choice == 2) {
+		cout << "вы вышли";
+		return 0;
+	}
+	else if (choice == 1) {
+		while (lives > 0 and wins < 3) {
+
+			int num2 = (rand() % 10) + 1;
+
+			cout << "угадать число от 1 до 10: " << endl;
+			cin >> num1;
+
+			if (num1 < 1 or num1 > 10) {
+
+				cout << "" << endl;
+				cout << "число должно быть от 1 до 10" << endl;
+
+			}
+			else if (num1 == num2) {
+
+				cout << "вы угадали" << endl;
+				wins++;
+			}
+			else if (num1 != num2) {
+
+				cout << "вы не угадали" << endl;
+			}
+			lives--;
+			cout << "угаданных чисел: " << wins << endl;
+			cout << "попыток: " << lives << endl;
+		}
+		if (wins == 3) {
+			cout << "вы выиграли!!!!";
+		}
+		else {
+			cout << "вы проиграли";
+			return 0;
+		}
+	}
+
+return 0;
+}
