@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(0, "");
+	int choice1, choice2, len;
+	char texture;
+	int a = 0;
+	cout << "программа Геометрические фигуры" << endl;
+	cout << "[1] -  линия" << endl;
+	cout << "выбери фигуру: " << endl;
+	cin >> choice1;
+	system("cls");
+	cout << "фигура линия" << endl;
+	cout << "[1] - вертикальная" << endl;
+	cout << "[2] - горизонатльная" << endl;
+	cout << "выбери тип" << endl;
+	cin >> choice2;
+	cout << "введи длину линии: " << endl;
+	cin >> len;
+	cout << "введи текстуру: " << endl;
+	cin >> texture;
+	cout << "результат: " << endl;
+	if (choice2 == 1) {
+		while (len > a) {
+			cout << texture << endl;
+			a++;
+		}
+	}
+	else {
+		while (len > a) {
+			cout << texture;
+			a++;
+		}
+	}
+	return 0;
+}
