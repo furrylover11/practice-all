@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(0, "");
+	cout << "проверка пароля" << endl;
+	string password = "1";
+
+	while (password != "12345") {
+		cout << "введи пароль: ";
+		cin >> password;
+		if (password != "12345") {
+			cout << "неверный пароль!!!!!!!" << endl;
+		}
+	}
+	cout << "добро пожаловать!";
+	return 0;
+}
