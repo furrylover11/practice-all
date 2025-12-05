@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(0, "");
+	int choice = 1;
+	int sum = 0;
+	cout << "сумматор чисел" << endl;
+	cout << "0 - окончание суммирования" << endl;
+	while (choice != 0) {
+		cout << "введи число: " << endl;
+		cin >> choice;
+		sum += choice;
+	}
+	cout << "сумма чисел: " << sum;
+	return 0;
+}
