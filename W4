@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(0, "");
+
+	int num;
+	int kol = 1;
+
+
+	cout << "количество цифр в числе" << endl;
+	cout << "введи число: ";
+	cin >> num;
+
+	while (num > 0) {
+
+		num = num / 10;
+		kol++;
+
+	}
+	cout << "количество цифр в числе: " << kol - 1;
+	return 0;
+}
