@@ -1,0 +1,76 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(0, "");
+	int choice1, choice2, len;
+	char texture;
+	int a = 0;
+	cout << "программа Геометрические фигуры" << endl;
+	cout << "[1] -  линия" << endl;
+	cout << "[2] - квадрат" << endl;
+	cout << "выбери фигуру: " << endl;
+	cin >> choice1;
+	system("cls");
+	switch (choice1) {
+	case 1: {
+		cout << "фигура линия" << endl;
+		cout << "[1] - вертикальная" << endl;
+		cout << "[2] - горизонатльная" << endl;
+		cout << "выбери тип" << endl;
+		cin >> choice2;
+		cout << "введи длину линии: " << endl;
+		cin >> len;
+		cout << "введи текстуру: " << endl;
+		cin >> texture;
+		cout << "результат: " << endl;
+		if (choice2 == 1) {
+			while (len > a) {
+				cout << texture << endl;
+				a++;
+			}
+		}
+		else {
+			while (len > a) {
+				cout << texture;
+				a++;
+			}
+		}
+		break;
+	}
+	case 2: {
+		cout << "фигура квадрат" << endl;
+		cout << "[1] - заполненный" << endl;
+		cout << "[2] - пустой" << endl;
+		cout << "выбери тип" << endl;
+		cin >> choice2;
+		cout << "введи размер: " << endl;
+		cin >> len;
+		cout << "введи текстуру: " << endl;
+		cin >> texture;
+		cout << "результат: " << endl;
+		if (choice2 == 1) {
+			for (int i = 0; i < len; i++) {
+				for (int j = 0; j < len; j++) {
+					cout << " " << texture;
+				}
+				cout << "" << endl;
+			}
+		}
+		else {
+			for (int y = 1; y <= len; y++) {
+				for (int x = 1; x <= len; x++) {
+					if (x == 1 or x == len or y ==1 or y == len) {
+						cout << " " << texture;
+					}
+					else {
+						cout << " .";
+					}
+				}
+				cout << endl;
+			}
+		}
+	}
+	}
+	return 0;
+}
