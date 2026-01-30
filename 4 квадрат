@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(0, "");
+	int mapsize;
+	char texture = '#';
+	cout << "введи размер карты: ";
+	cin >> mapsize;
+	for (int x = 0; x < mapsize; x++) {
+		int b = mapsize / 2;
+		for (int y = 0; y < mapsize; y++) {
+			int c = mapsize / 2;
+			if (x / b == 0 or y /c == 0) {
+
+				cout << " .";
+			}
+			else {
+				cout << " " << texture;
+			}
+
+		}
+		cout << endl;
+	}
+	return 0;
+
+}
