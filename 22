@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(0, "");
+	const int a = 10;
+	int arrInt[a] = { 1,2,3,4,50,10,100,88,33,22 };
+	short arrShort[a] = { 0,1,2,3,4,5,6,7,8,9 };
+	long arrLong[a] = {3,5,2,9,33,8664,357,355,56,313 };
+	double arrDouble[a] = {1.2,4.4,55.5, 77, 8,1,5,99.1,11,657};
+	char arrChar[a] = {'!','@','$','^', '&', '*','%',')','(','+'};
+	bool arrBool[a] = {true,false,true,true,false,false,true,true,false,true};
+	string arrString[a] = {"hello","hi","she","her","he","his","table","word","world","pen"};
+
+	cout << "массив int: " << endl;
+	for (int i = 0; i < a; i++) {
+		cout << arrInt[i] << endl;
+	}
+	cout << "массив short: " << endl;
+	for (int i = 0; i < a; i++) {
+		cout << arrShort[i] << endl;
+	}
+	cout << "массив long: " << endl;
+	for (int i = 0; i < a; i++) {
+		cout << arrLong[i] << endl;
+	}
+	cout << "массив double: " << endl;
+	for (int i = 0; i < a; i++) {
+		cout << arrDouble[i] << endl;
+	}
+	cout << "массив char: " << endl;
+	for (int i = 0; i < a; i++) {
+		cout << arrChar[i] << endl;
+	}
+	cout << "массив bool: " << endl;
+	for (int i = 0; i < a; i++) {
+		cout << arrBool[i] << endl;
+	}
+	cout << "массив string: " << endl;
+	for (int i = 0; i < a; i++) {
+		cout << arrString[i] << endl;
+	}
+
+	return 0;
+}
