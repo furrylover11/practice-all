@@ -3,10 +3,9 @@ using namespace std;
 
 int main() {
 	setlocale(0, "");
-	int choice1, choice2, len;
+	int choice1, choice2, len, mapsize, h;
 	char texture;
 	int a = 0;
-	int h, b;
 	cout << "программа Геометрические фигуры" << endl;
 	cout << "[1] -  линия" << endl;
 	cout << "[2] - квадрат" << endl;
@@ -40,6 +39,8 @@ int main() {
 		}
 		break;
 	}
+
+
 	case 2: {
 		cout << "фигура квадрат" << endl;
 		cout << "[1] - заполненный" << endl;
@@ -47,22 +48,22 @@ int main() {
 		cout << "выбери тип" << endl;
 		cin >> choice2;
 		cout << "введи размер: " << endl;
-		cin >> len;
+		cin >> mapsize;
 		cout << "введи текстуру: " << endl;
 		cin >> texture;
 		cout << "результат: " << endl;
 		if (choice2 == 1) {
-			for (int i = 0; i < len; i++) {
-				for (int j = 0; j < len; j++) {
+			for (int x = 0; x < mapsize; x++) {
+				for (int y = 0; y < mapsize; y++) {
 					cout << " " << texture;
 				}
 				cout << "" << endl;
 			}
 		}
 		else {
-			for (int y = 1; y <= len; y++) {
-				for (int x = 1; x <= len; x++) {
-					if (x == 1 or x == len or y == 1 or y == len) {
+			for (int y = 1; y <= mapsize; y++) {
+				for (int x = 1; x <= mapsize; x++) {
+					if (x == 1 or x == mapsize or y == 1 or y == mapsize) {
 						cout << " " << texture;
 					}
 					else {
@@ -72,7 +73,9 @@ int main() {
 				cout << endl;
 			}
 		}
+		break;
 	}
+
 	case 3: {
 		cout << "фигура прямоугольник" << endl;
 		cout << "выберите тип" << endl;
@@ -81,7 +84,7 @@ int main() {
 		cout << "выбери тип " << endl;
 		cin >> choice2;
 		cout << "введи ширину: " << endl;
-		cin >> b;
+		cin >> len;
 		cout << "введи высоту: " << endl;
 		cin >> h;
 		cout << "введи текстуру: " << endl;
@@ -89,7 +92,7 @@ int main() {
 		if (choice2 == 1) {
 			cout << "результат: " << endl;
 			for (int y = 0; y < h; y++) {
-				for (int x = 0; x < b; x++) {
+				for (int x = 0; x < len; x++) {
 					cout << " " << texture;
 				}
 				cout << endl;
@@ -97,18 +100,18 @@ int main() {
 		}
 		else {
 			h = h - 1;
-			b = b - 1;
+			len = len - 1;
 			for (int y = 0; y <= h; y++) {
-				for (int x = 0; x <= b; x++) {
-					if (x == 0 or y == 0 or x == b or y == h) {
+				for (int x = 0; x <= len; x++) {
+					if (x == 0 or y == 0 or x == len or y == h) {
 						cout << " " << texture;
 					}
 					else {
 						cout << " .";
 					}
 				}
-					cout << endl;
-				}
+				cout << endl;
+			}
 		}
 	}
 	}
