@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
 	setlocale(0, "");
-	int choice1, choice2, len;
+	int choice1, choice2, len, mapsize;
 	char texture;
 	int a = 0;
 	cout << "программа Геометрические фигуры" << endl;
@@ -38,6 +38,7 @@ int main() {
 		}
 		break;
 	}
+
 	case 2: {
 		cout << "фигура квадрат" << endl;
 		cout << "[1] - заполненный" << endl;
@@ -45,22 +46,22 @@ int main() {
 		cout << "выбери тип" << endl;
 		cin >> choice2;
 		cout << "введи размер: " << endl;
-		cin >> len;
+		cin >> mapsize;
 		cout << "введи текстуру: " << endl;
 		cin >> texture;
 		cout << "результат: " << endl;
 		if (choice2 == 1) {
-			for (int i = 0; i < len; i++) {
-				for (int j = 0; j < len; j++) {
+			for (int x = 0; x < mapsize; x++) {
+				for (int y = 0; y < mapsize; y++) {
 					cout << " " << texture;
 				}
 				cout << "" << endl;
 			}
 		}
 		else {
-			for (int y = 1; y <= len; y++) {
-				for (int x = 1; x <= len; x++) {
-					if (x == 1 or x == len or y ==1 or y == len) {
+			for (int y = 1; y <= mapsize; y++) {
+				for (int x = 1; x <= mapsize; x++) {
+					if (x == 1 or x == mapsize or y == 1 or y == mapsize) {
 						cout << " " << texture;
 					}
 					else {
