@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "");
+	int mapsize;
+	char texture;
+	cout << "фигура змейка" << endl;
+	cout << "введи размер: ";
+	cin >> mapsize;
+	cout << "введи текстуру: ";
+	cin >> texture;
+	for (int x = 0; x < mapsize; x++) {
+		for (int y = 0; y < mapsize; y++) {
+			if (x % 2 == 0) {
+				cout << " " << texture;
+
+			}
+			else {
+				if ((x / 2) % 2 == 0 and y == mapsize - 1) {
+					cout << " " << texture;
+				}
+				else if ((x / 2) % 2 != 0 and y == 0) {
+					cout << " " << texture;
+				}
+				else {
+					cout << " .";
+				}
+			}
+		}
+		cout << endl;
+	}
+	return 0;
+}
