@@ -1,0 +1,125 @@
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(0, "");
+	int const a = 7;
+	int choice, usersnumb;
+	int arr[a];
+
+	for (int i = 0; i < a; i++) {
+		cout << "введи число массива: ";
+		cin >> arr[i];
+	}
+	cout << endl;
+	cout << "ваш массив:" << endl;
+	for (int i = 0; i < a; i++) {
+		cout << "ячейка " << i << ": " << arr[i] << " " << endl;
+	}
+
+	cout << "настройки массива" << endl;
+	cout << "[1] - сортировка по возрастанию" << endl;
+	cout << "[2] - сортировка по убыванию" << endl;
+	cout << "[3] - перемножить массив" << endl;
+	cout << "[4] - Сложить массив" << endl;
+	cout << "[5] - Разделить массив" << endl;
+	cout << "[6] - Обнулить массив" << endl;
+	cout << "[9] - Задать новые значения массиву" << endl;
+	cout << "выбери: ";
+	cin >> choice;
+	switch (choice) {
+	case 1: {
+		for (int i = 0; i < a; i++) {
+			for (int j = 0; j < a - 1; j++) {
+				if (arr[j] > arr[j + 1]) {
+					int buff = arr[j];
+
+					arr[j] = arr[j + 1];
+					arr[j + 1] = buff;
+				}
+			}
+		}
+
+		cout << "ваш массив:" << endl;
+		for (int i = 0; i < a; i++) {
+			cout << arr[i] << " ";
+		}
+		break;
+	}
+
+	case 2: {
+		for (int i = 0; i < a; i++) {
+			for (int j = 0; j < a + 1; j++) {
+				if (arr[j] < arr[j + 1]) {
+					int buff = arr[j];
+
+					arr[j] = arr[j + 1];
+					arr[j + 1] = buff;
+				}
+			}
+		}
+		cout << "ваш массив:" << endl;
+		for (int i = 0; i < a; i++) {
+			cout << arr[i] << " ";
+		}
+		break;
+	}
+
+	case 3: {
+		cout << "введи число, на которое будет умножаться: ";
+		cin >> usersnumb;
+		for (int i = 0; i < a; i++) {
+			arr[i] = arr[i] * usersnumb;
+		}
+
+		cout << "ваш массив:" << endl;
+		for (int i = 0; i < a; i++) {
+			cout << arr[i] << " ";
+		}
+		break;
+	}
+
+	case 4: {
+		cout << "введи число, с которым будет складываться: ";
+		cin >> usersnumb;
+		for (int i = 0; i < a; i++) {
+			arr[i] = arr[i] + usersnumb;
+		}
+
+		cout << "ваш массив:" << endl;
+		for (int i = 0; i < a; i++) {
+			cout << arr[i] << " ";
+		}
+		break;
+	}
+	case 5: {
+		cout << "введи число, на которое будет делиться: ";
+		cin >> usersnumb;
+		for (int i = 0; i < a; i++) {
+			float number = float(arr[i]) / float(usersnumb);
+			cout << number << " ";
+		}
+		break;
+	}
+	case 6: {
+		for (int i = 0; i < a; i++) {
+			arr[i] = 0;
+		}
+		cout << "ваш массив:" << endl;
+		for (int i = 0; i < a; i++) {
+			cout << arr[i] << " ";
+		}
+		break;
+	}
+	case 9: {
+		for (int i = 0; i < a; i++) {
+			cout << "введи новое число массива: ";
+			cin >> arr[i];
+		}
+		cout << "ваш новый массив:" << endl;
+		for (int i = 0; i < a; i++) {
+			cout << arr[i] << " ";
+		}
+	}
+	}
+	return 0;
+}
