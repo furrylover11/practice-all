@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(0, "");
+	int mapsize;
+	char texture;
+	cout << "рекурсивный квадрат" << endl;
+	cout << "введи размер: ";
+	cin >> mapsize;
+	cout << "введи текстуру: ";
+	cin >> texture;
+	for (int y = 0; y < mapsize; y++) {
+		for (int x = 0; x < mapsize; x++) {
+			int layer = y;
+
+			if (x < layer) {
+				layer = x;
+			}
+			if (mapsize - 1 - y < layer) {
+				layer = mapsize - 1 - y;
+			}
+			if (mapsize - 1 - x < layer) {
+				layer = mapsize - 1 - x;
+			}
+
+
+			if (layer % 2 == 0) {
+				cout << " " << texture;
+			}
+			else {
+				cout << " .";
+			}
+		}
+		cout << endl;
+	}
+
+	return 0;
+}
