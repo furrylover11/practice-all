@@ -1,0 +1,128 @@
+#include <iostream>
+#include <Windows.h>
+#include <cmath>
+using namespace std;
+double calc(float num1, float num2, int op) {
+	switch (op) {
+	case 1: {
+		return num1 + num2;
+		break;
+	}
+	case 2: {
+		return num1 - num2;
+		break;
+	}
+	case 3: {
+		return num1 * num2;
+		break;
+	}
+	case 4: {
+		return num1 / num2;
+		break;
+	}
+	case 5: {
+		return int(num1) % int(num2);
+		break;
+	}
+	case 6: {
+		return pow(num1, num2);
+		break;
+	}
+	case 7: {
+		return pow(num1, (1 / num2));
+		break;
+	}
+	case 8: {
+		return pow(num1, 3);
+		break;
+	}
+	}
+}
+	double sincosCALC (float num1, int op) {
+		switch (op) {
+		case 9: {
+		double angle = num1 * (3.14 / 180);
+		return sin(angle);
+		break;
+		}
+	case 10: {
+		double angle = num1 * (3.14 / 180);
+		return cos(angle);
+		break;
+	}
+
+	}
+	}
+
+int main() {
+	SetConsoleCP(65001);
+	SetConsoleOutputCP(65001);
+	int op;
+	double num1;
+	double num2 = 1;
+	cout << "[1] - складывать" << endl;
+	cout << "[2] - вычитать" << endl;
+	cout << "[3] - умножать" << endl;
+	cout << "[4] - делить" << endl;
+	cout << "[5] - деление от остатка" << endl;
+	cout << "[6] - степень" << endl;
+	cout << "[7] - корень" << endl;
+	cout << "[8] - куб" << endl;
+	cout << "[9] - синус" << endl;
+	cout << "[10] - косинус" << endl;
+	cout << "введи опреацию: ";
+	cin >> op;
+	cout << endl;
+	cout << "введи 1 число: ";
+	cin >> num1;
+	if (op < 7) {
+		cout << "введи 2 число: ";
+		cin >> num2;
+	}
+	switch (op) {
+	case 1: {
+		cout << calc(num1, num2, op);
+		break;
+	}
+	case 2: {
+		cout << calc(num1, num2, op);
+		break;
+	}
+	case 3: {
+		cout << calc(num1, num2, op);
+		break;
+	}
+	case 4: {
+		cout << calc(num1, num2, op);
+		break;
+	}
+	case 5: {
+		cout << calc(num1, num2, op);
+		break;
+	}
+	case 6: {
+		cout << calc(num1, num2, op);
+		break;
+	}
+	case 7: {
+		cout << "введи степень корня: ";
+		cin >> num2;
+		cout << calc(num1, num2, op);
+		break;
+	}
+	case 8: {
+		cout << calc(num1, num2, op);
+		break;
+	}
+	case 9: {
+		cout << sincosCALC(num1, op);
+		break;
+	}
+	case 10: {
+		cout << sincosCALC(num1, op);
+		break;
+	}
+	}
+
+	return 0;
+}
