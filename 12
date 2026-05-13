@@ -1,0 +1,336 @@
+#include <iostream>;
+#include <Windows.h>;
+using namespace std;
+
+int main() {
+	SetConsoleCP(65001);
+	SetConsoleOutputCP(65001);
+	int choice1, textcolorchoice;
+	int askcountChoice = 1;
+	string answerchoice;
+	int asks = 8;
+	int settingsChoice = 0;
+	int wins = 0;
+	string name = "безымянный пользователь";
+	int exit = 0;
+	int n = 1;
+	cout << "привет это викторина" << endl;
+	while (true) {
+		cout << "меню" << endl;
+		cout << "[1] - начать игру" << endl;
+		cout << "[2] - настройки" << endl;
+		cout << "[3] - правила" << endl;
+		cout << "[4] - выйти" << endl;
+		cin >> choice1;
+
+		switch (choice1) {
+		case 3: {
+			system("cls");
+			cout << "правила:" << endl;
+			cout << "Вы получаете очки за правильный ответ на вопрос" << endl;
+			cout << "Вы проходите дальше за правильный ответ" << endl;
+			cout << "Вы теряете жизнь при неправильном ответе" << endl;
+			break;
+		}
+
+		case 2: {
+			system("cls");
+			cout << "настройки викторины" << endl;
+			cout << "[1] - изменить имя" << endl;
+			cout << "[2] - количество вопросов" << endl;
+			cout << "[3] - редактировать интерфейс" << endl;
+			cout << "выбери дальнейшее действие: " << endl;
+			cin >> settingsChoice;
+			switch (settingsChoice) {
+			case 1: {
+				cout << "введите имя: " << endl;
+				cin >> name;
+				cout << "имя изменено на " << name << endl;
+				break;
+			}
+
+			case 2: {
+				cout << "количество вопросов: " << endl;
+				cout << "[1] - 8 вопросов" << endl;
+				cout << "[2] - 10 вопросов" << endl;
+				cout << "[3] - 12 вопросов" << endl;
+				cout << "выбери: ";
+				cin >> askcountChoice;
+				cout << "вы изменили количество вопросов" << endl;
+				break;
+			}
+
+			case 3: {
+				cout << "редактирование интерфейса: " << endl;
+				cout << "цвета текста: " << endl;
+				cout << "[1] - фиолетовый" << endl;
+				cout << "[2] - голубой" << endl;
+				cout << "выбери: ";
+				cin >> textcolorchoice;
+				if (textcolorchoice == 1) {
+					system("Color 5");
+					break;
+				}
+				else if (textcolorchoice == 2); {
+					system("Color 3");
+					break;
+				}
+				break;
+			}
+				  break;
+			}
+			break;
+		}
+		case 1: {
+			system("cls");
+			int lives = 3;
+			while (wins < 3) {
+				cout << "начало викторины" << endl;
+				cout << "игрок: " << name << endl;
+				cout << "жизни: " << lives << "		" << "очков: " << wins << endl;
+				cout << "1. Вопрос: Как обозначается логическое И? " << endl;
+				cout << "варианты ответов: " << endl;
+				cout << "A - ||	" << "B - &&" << endl;
+				cout << "C - ^^	" << "D - ##" << endl;
+				cout << "ответ: ";
+				cin >> answerchoice;
+				if (answerchoice == "B") {
+					wins++;
+				}
+				else {
+					lives--;
+				}
+				cout << "игрок: " << name << endl;
+				cout << "жизни: " << lives << "		" << "очков: " << wins << endl;
+				cout << "2. Вопрос: Как называется цикл, который выполняется хотя бы 1 раз, независимо от условия?" << endl;
+				cout << "варианты ответов: " << endl;
+				cout << "A - while	" << "B - for" << endl;
+				cout << "C - if-else	" << "D - do-while" << endl;
+				cout << "ответ: ";
+				cin >> answerchoice;
+				if (answerchoice == "D") {
+					wins++;
+				}
+				else {
+					lives--;
+				}
+				cout << "игрок: " << name << endl;
+				cout << "жизни: " << lives << "		" << "очков: " << wins << endl;
+				cout << "3. Вопрос: Какой тип данных используется для хранения целых чисел?" << endl;
+				cout << "варианты ответов: " << endl;
+				cout << "A - string	" << "B - float" << endl;
+				cout << "C - int	" << "D - bool" << endl;
+				cout << "ответ: ";
+				cin >> answerchoice;
+				if (answerchoice == "C") {
+					wins++;
+				}
+				else {
+					lives--;
+				}
+				if (lives <= 0) {
+					cout << "гейм овер" << endl;
+					break;
+				}
+				cout << "игрок: " << name << endl;
+				cout << "жизни: " << lives << "		" << "очков: " << wins << endl;
+				cout << "4. Вопрос: Какой язык программирования считается основным для веб-разработки в браузере?" << endl;
+				cout << "варианты ответов: " << endl;
+				cout << "A - Python" << endl;
+				cout << "B - JavaScript" << endl;
+				cout << "C - SQL" << endl;
+				cout << "D - Swift" << endl;
+				cout << "ответ: ";
+				cin >> answerchoice;
+				if (answerchoice == "C") {
+					wins++;
+				}
+				else {
+					lives--;
+				}
+				if (lives <= 0) {
+					cout << "гейм овер" << endl;
+					break;
+				}
+				cout << "игрок: " << name << endl;
+				cout << "жизни: " << lives << "		" << "очков: " << wins << endl;
+				cout << "5. Вопрос: Что такое переменная в программировании?" << endl;
+				cout << "варианты ответов: " << endl;
+				cout << "A - Функция для выполнения вычислений" << endl;
+				cout << "B - Область памяти, хранящая данные" << endl;
+				cout << "C - Команда для вывода текста" << endl;
+				cout << "D - Специальный тип файла" << endl;
+				cout << "ответ: ";
+				cin >> answerchoice;
+				if (answerchoice == "B") {
+					wins++;
+				}
+				else {
+					lives--;
+				}
+				if (lives <= 0) {
+					cout << "гейм овер" << endl;
+					break;
+				}
+				cout << "игрок: " << name << endl;
+				cout << "жизни: " << lives << "		" << "очков: " << wins << endl;
+				cout << "6. Вопрос: Что такое массив?" << endl;
+				cout << "варианты ответов: " << endl;
+				cout << "A - Набор функций" << endl;
+				cout << "B - Коллекция элементов одного типа" << endl;
+				cout << "C - Вид цикла" << endl;
+				cout << "D - Тип данных для хранения текста" << endl;
+				cout << "ответ: ";
+				cin >> answerchoice;
+				if (answerchoice == "B") {
+					wins++;
+				}
+				else {
+					lives--;
+				}
+				if (lives <= 0) {
+					cout << "гейм овер" << endl;
+					break;
+				}
+				cout << "игрок: " << name << endl;
+				cout << "жизни: " << lives << "		" << "очков: " << wins << endl;
+				cout << "7. Вопрос: Какой язык программирования используется для создания Android‑приложений?" << endl;
+				cout << "варианты ответов: " << endl;
+				cout << "A - Swift" << endl;
+				cout << "B - PHP" << endl;
+				cout << "C - Ruby" << endl;
+				cout << "D - Kotlin" << endl;
+				cout << "ответ: ";
+				cin >> answerchoice;
+				if (answerchoice == "D") {
+					wins++;
+				}
+				else {
+					lives--;
+				}
+				if (lives <= 0) {
+					cout << "гейм овер" << endl;
+					break;
+				}
+				cout << "игрок: " << name << endl;
+				cout << "жизни: " << lives << "		" << "очков: " << wins << endl;
+				cout << "8. Вопрос: Что такое функция в программировании?" << endl;
+				cout << "варианты ответов: " << endl;
+				cout << "A - Блок кода, выполняющий определённую задачу" << endl;
+				cout << "B - Оператор сравнения" << endl;
+				cout << "C - Вид цикла" << endl;
+				cout << "D - Переменная, хранящая число" << endl;
+				cout << "ответ: ";
+				cin >> answerchoice;
+				if (answerchoice == "A") {
+					wins++;
+				}
+				else {
+					lives--;
+				}
+				if (lives <= 0) {
+					cout << "гейм овер" << endl;
+					break;
+				}
+				if (askcountChoice != 1) {
+					cout << "игрок: " << name << endl;
+					cout << "жизни: " << lives << "		" << "очков: " << wins << endl;
+					cout << "9. Вопрос: Какой метод в Python добавляет элемент в конец списка?" << endl;
+					cout << "варианты ответов: " << endl;
+					cout << "A - append()" << endl;
+					cout << "B - add()" << endl;
+					cout << "C - insert()" << endl;
+					cout << "D - push()" << endl;
+					cout << "ответ: ";
+					cin >> answerchoice;
+					if (answerchoice == "A") {
+						wins++;
+					}
+					else {
+						lives--;
+					}
+					if (lives <= 0) {
+						cout << "гейм овер" << endl;
+						break;
+					}
+					cout << "игрок: " << name << endl;
+					cout << "жизни: " << lives << "		" << "очков: " << wins << endl;
+					cout << "10. Вопрос: Что означает аббревиатура SQL?" << endl;
+					cout << "варианты ответов: " << endl;
+					cout << "A - Simple Query Language" << endl;
+					cout << "B - Standard Query Language" << endl;
+					cout << "C - Structured Query Language" << endl;
+					cout << "D - System Query Language" << endl;
+					cout << "ответ: ";
+					cin >> answerchoice;
+					if (answerchoice == "C") {
+						wins++;
+					}
+					else {
+						lives--;
+					}
+					if (lives <= 0) {
+						cout << "гейм овер" << endl;
+						break;
+					}
+					if (askcountChoice == 3) {
+						cout << "игрок: " << name << endl;
+						cout << "жизни: " << lives << "		" << "очков: " << wins << endl;
+						cout << "11. Вопрос: Что такое ООП?" << endl;
+						cout << "варианты ответов: " << endl;
+						cout << "A - Оптимизированный оператор программирования" << endl;
+						cout << "B - Общий подход к программированию" << endl;
+						cout << "C - Оперативный обмен программами" << endl;
+						cout << "D - Объектно‑ориентированное программирование" << endl;
+						cout << "ответ: ";
+						cin >> answerchoice;
+						if (answerchoice == "D") {
+							wins++;
+						}
+						else {
+							lives--;
+						}
+						if (lives <= 0) {
+							cout << "гейм овер" << endl;
+							break;
+						}
+						cout << "игрок: " << name << endl;
+						cout << "жизни: " << lives << "		" << "очков: " << wins << endl;
+						cout << "12. Вопрос: Что такое баг (bug) в программировании?" << endl;
+						cout << "варианты ответов: " << endl;
+						cout << "A - Специальная функция" << endl;
+						cout << "B - Команда компилятора" << endl;
+						cout << "C - Вид цикла" << endl;
+						cout << "D - Ошибка в коде" << endl;
+						cout << "ответ: ";
+						cin >> answerchoice;
+						if (answerchoice == "D") {
+							wins++;
+						}
+						else {
+							lives--;
+						}
+						if (lives <= 0) {
+							cout << "гейм овер" << endl;
+							break;
+						}
+					}
+				}
+			}
+			if (lives > 0) {
+				system("cls");
+				cout << "вы победили" << endl;
+				cout << "у вас осталось " << lives << " жизней" << endl;
+				cout << " вы заработали " << wins << " очков" << endl;
+			}
+			break;
+		}
+		case 4: {
+			cout << "вы вышли";
+			return 0;
+		}
+		}
+		system("pause");
+	}
+	return 0;
+}
