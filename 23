@@ -1,0 +1,211 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+setlocale(0, "");
+
+	int num = 0;
+const int SIZE = 5;
+int numbers[SIZE];
+	int MapSize = 15;
+	int MapSize = 26;
+
+
+	for (int i = 0; i < SIZE; i++) {
+		cout << "Введите число " << num+1<<": ";
+		cin >> numbers[i];
+		num++;
+	}
+
+
+int number;
+cout << "|Таблица: 1" << endl;
+	for (int a=0; a < MapSize; a++) {
+
+	for (int a = 0; a < MapSize; a++) {
+cout << "- ";
+}
+	cout << endl;
+	cout << "|  Число  |         Пример         |   Результат  |" << endl;
+
+	for (int y = 0; y < 5; y++) {
+
+		for (int j = 0; j < MapSize; j++) {
+			cout << " ";
+	for (int y = 0; y<8;y++) {
+		for (int x = 0; x<MapSize;x++) {
+			if (x == 0 && y == 1) {
+				cout << "|  " << numbers[0] << "      |          " << numbers[0] << " + " << numbers[0] << "         |        " << numbers[0] + numbers[0] << "     |";
+			}
+			else if (x == 0 && y == 3) {
+				cout << "|  " << numbers[0] << "      |          " << numbers[0] << " - " << numbers[0] << "         |        " << numbers[0] - numbers[0] << "     |";
+			}
+			else if (x == 0 && y == 5) {
+				cout << "|  " << numbers[0] << "      |          " << numbers[0] << " / " << numbers[0] << "         |        " << numbers[0] / numbers[0] << "     |";
+			}
+			else if (x == 0 && y == 7) {
+				cout << "|  " << numbers[0] << "      |          " << numbers[0] << " * " << numbers[0] << "         |        " << numbers[0] * numbers[0] << "     |";
+			}
+			else if (x >= 0 && y % 2 == 0) {
+				cout << "- ";
+			}
+}
+	cout << endl;
+	}
+	for (int a = 0; a < MapSize; a++) {
+		cout << "- ";
+	}
+	cout << endl;
+	cout << endl;
+
+	cout << "|Таблица: 2" << endl;
+
+	for (int a = 0; a < MapSize; a++) {
+		cout << "- ";
+	}
+	cout << endl;
+	cout << "|  Число  |         Пример         |   Результат  |" << endl;
+
+	for (int y = 0; y < 8; y++) {
+		for (int x = 0; x < MapSize; x++) {
+			if (x == 0 && y == 1) {
+				cout << "|  " << numbers[1] << "      |          " << numbers[1] << " + " << numbers[1] << "         |        " << numbers[1] + numbers[1] << "     |";
+			}
+			else if (x == 0 && y == 3) {
+				cout << "|  " << numbers[1] << "      |          " << numbers[1] << " - " << numbers[1] << "         |        " << numbers[1] - numbers[1] << "     |";
+			}
+			else if (x == 0 && y == 5) {
+				cout << "|  " << numbers[1] << "      |          " << numbers[1] << " / " << numbers[1] << "         |        " << numbers[1] / numbers[1] << "     |";
+			}
+			else if (x == 0 && y == 7) {
+				cout << "|  " << numbers[1] << "      |          " << numbers[1] << " * " << numbers[1] << "         |        " << numbers[1] * numbers[1] << "     |";
+			}
+			else if (x >= 0 && y % 2 == 0) {
+				cout << "- ";
+			}
+		}
+cout << endl;
+		
+		
+	
+		for (int x = 1; x < MapSize;x++ ) {
+			if (x == MapSize / MapSize) {
+				cout << "| " << "Число ";
+	}
+	for (int a = 0; a < MapSize; a++) {
+		cout << "- ";
+	}
+	cout << endl;
+	cout << endl;
+
+	cout << "|Таблица: 3" << endl;
+
+	for (int a = 0; a < MapSize; a++) {
+		cout << "- ";
+	}
+	cout << endl;
+	cout << "|  Число  |         Пример         |   Результат  |" << endl;
+
+	for (int y = 0; y < 8; y++) {
+		for (int x = 0; x < MapSize; x++) {
+			if (x == 0 && y == 1) {
+				cout << "|  " << numbers[2] << "      |          " << numbers[2] << " + " << numbers[2] << "         |        " << numbers[2] + numbers[2] << "     |";
+}
+			if (x == MapSize - 1 || x == MapSize / 2 || x == MapSize / 4) {
+				cout << "|";
+			else if (x == 0 && y == 3) {
+				cout << "|  " << numbers[2] << "      |          " << numbers[2] << " - " << numbers[2] << "         |        " << numbers[2] - numbers[2] << "     |";
+}
+			else {
+				cout << " ";
+			else if (x == 0 && y == 5) {
+				cout << "|  " << numbers[2] << "      |          " << numbers[2] << " / " << numbers[2] << "         |        " << numbers[2] / numbers[2] << "     |";
+			}
+			else if (x == 0 && y == 7) {
+				cout << "|  " << numbers[2] << "      |          " << numbers[2] << " * " << numbers[2] << "         |        " << numbers[2] * numbers[2] << "     |";
+			}
+			else if (x >= 0 && y % 2 == 0) {
+				cout << "- ";
+}
+}
+		
+cout << endl;
+		
+		for (int j = 0; j < MapSize; j++) {
+			cout << "- ";
+		
+	}
+	for (int a = 0; a < MapSize; a++) {
+		cout << "- ";
+	}
+	cout << endl;
+	cout << endl;
+
+	cout << "|Таблица: 4" << endl;
+
+	for (int a = 0; a < MapSize; a++) {
+		cout << "- ";
+	}
+	cout << endl;
+	cout << "|  Число  |         Пример         |   Результат  |" << endl;
+
+	for (int y = 0; y < 8; y++) {
+		for (int x = 0; x < MapSize; x++) {
+			if (x == 0 && y == 1) {
+				cout << "|  " << numbers[3] << "      |          " << numbers[3] << " + " << numbers[3] << "         |        " << numbers[3] + numbers[3] << "     |";
+			}
+			else if (x == 0 && y == 3) {
+				cout << "|  " << numbers[3] << "      |          " << numbers[3] << " - " << numbers[3] << "         |        " << numbers[3] - numbers[3] << "     |";
+			}
+			else if (x == 0 && y == 5) {
+				cout << "|  " << numbers[3] << "      |          " << numbers[3] << " / " << numbers[3] << "         |        " << numbers[3] / numbers[3] << "     |";
+			}
+			else if (x == 0 && y == 7) {
+				cout << "|  " << numbers[3] << "      |          " << numbers[3] << " * " << numbers[3] << "         |        " << numbers[3] * numbers[3] << "    |";
+			}
+			else if (x >= 0 && y % 2 == 0) {
+				cout << "- ";
+			}
+}
+	
+	cout <<endl;
+		cout << endl;
+	}
+	for (int a = 0; a < MapSize; a++) {
+		cout << "- ";
+	}
+	cout << endl;
+	cout << endl;
+
+	cout << "|Таблица: 5" << endl;
+
+	for (int a = 0; a < MapSize; a++) {
+		cout << "- ";
+}
+	cout << endl;
+	cout << "|  Число  |         Пример         |   Результат  |" << endl;
+
+	for (int y = 0; y < 8; y++) {
+		for (int x = 0; x < MapSize; x++) {
+			if (x == 0 && y == 1) {
+				cout << "|  " << numbers[4] << "      |          " << numbers[4] << " + " << numbers[4] << "         |        " << numbers[4] + numbers[4] << "    |";
+			}
+			else if (x == 0 && y == 3) {
+				cout << "|  " << numbers[4] << "      |          " << numbers[4] << " - " << numbers[4] << "         |        " << numbers[4] - numbers[4] << "     |";
+			}
+			else if (x == 0 && y == 5) {
+				cout << "|  " << numbers[4] << "      |          " << numbers[4] << " / " << numbers[4] << "         |        " << numbers[4] / numbers[4] << "     |";
+			}
+			else if (x == 0 && y == 7) {
+				cout << "|  " << numbers[4] << "      |          " << numbers[4] << " * " << numbers[4] << "         |        " << numbers[4] * numbers[4] << "    |";
+			}
+			else if (x >= 0 && y % 2 == 0) {
+				cout << "- ";
+			}
+		}
+		cout << endl;
+	}
+	for (int a = 0; a < MapSize; a++) {
+		cout << "- ";
+	}
+}
